@@ -6,8 +6,8 @@ let formData = {
 const form = document.querySelector('.feedback-form');
 
 form.addEventListener('input', event => {
-  const email = event.currentTarget.elements.email.value;
-  const message = event.currentTarget.elements.message.value;
+  const email = event.currentTarget.elements.email.value.trim();
+  const message = event.currentTarget.elements.message.value.trim();
   formData.email = email;
   formData.message = message;
   saveToLS('feedback-form-state', formData);
